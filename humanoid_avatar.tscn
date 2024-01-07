@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0yyghr5nnnxf"]
+
+[ext_resource type="PackedScene" uid="uid://3d4p3i74knje" path="res://start_xr.tscn" id="1_61wpu"]
+[ext_resource type="Script" path="res://avatar.gd" id="2_287jy"]
+[ext_resource type="PackedScene" uid="uid://cmn1e8q1k8kde" path="res://assets/humanoid_avatar/female_avatar.gltf" id="3_ybhf5"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mg8i4"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_a8xlk"]
+sky_material = SubResource("ProceduralSkyMaterial_mg8i4")
+
+[sub_resource type="Environment" id="Environment_rticw"]
+background_mode = 2
+sky = SubResource("Sky_a8xlk")
+tonemap_mode = 2
+
+[node name="HumanoidAvatar" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rticw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+cull_mask = 1048573
+
+[node name="IKTarget" type="Node3D" parent="XROrigin3D/XRCamera3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 3.75965e-08, 0.902803, -0.430054, 7.89256e-08, -0.430054, -0.902803, 0, 0, 0.0107725)
+
+[node name="OpenXRHandLeft" type="OpenXRHand" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 1, 0)
+hand_skeleton = NodePath("../../Avatar/female_avatar/Armature/GeneralSkeleton")
+skeleton_rig = 1
+
+[node name="IKTarget" type="Node3D" parent="XROrigin3D/OpenXRHandLeft"]
+
+[node name="OpenXRHandRight" type="OpenXRHand" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 1, 0)
+hand = 1
+hand_skeleton = NodePath("../../Avatar/female_avatar/Armature/GeneralSkeleton")
+skeleton_rig = 1
+
+[node name="IKTarget" type="Node3D" parent="XROrigin3D/OpenXRHandRight"]
+
+[node name="StartXR" parent="." instance=ExtResource("1_61wpu")]
+
+[node name="Avatar" type="Node3D" parent="." node_paths=PackedStringArray("start_ik", "camera", "origin")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+script = ExtResource("2_287jy")
+start_ik = [NodePath("female_avatar/Armature/GeneralSkeleton/Spine"), NodePath("female_avatar/Armature/GeneralSkeleton/LeftArm"), NodePath("female_avatar/Armature/GeneralSkeleton/RightArm")]
+camera = NodePath("../XROrigin3D/XRCamera3D")
+origin = NodePath("../XROrigin3D")
+
+[node name="female_avatar" parent="Avatar" instance=ExtResource("3_ybhf5")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0.0442981)
+
+[node name="Eyes" parent="Avatar/female_avatar/Armature/GeneralSkeleton" index="1"]
+layers = 2
+
+[node name="Head" parent="Avatar/female_avatar/Armature/GeneralSkeleton" index="4"]
+layers = 2
+
+[node name="Spine" type="SkeletonIK3D" parent="Avatar/female_avatar/Armature/GeneralSkeleton" index="5"]
+process_priority = 1
+root_bone = &"Root"
+tip_bone = &"Head"
+target_node = NodePath("../../../../../XROrigin3D/XRCamera3D/IKTarget")
+
+[node name="LeftArm" type="SkeletonIK3D" parent="Avatar/female_avatar/Armature/GeneralSkeleton" index="6"]
+process_priority = 1
+root_bone = &"LeftUpperArm"
+tip_bone = &"LeftHand"
+use_magnet = true
+magnet = Vector3(2, 0, -2)
+target_node = NodePath("../../../../../XROrigin3D/OpenXRHandLeft/IKTarget")
+
+[node name="RightArm" type="SkeletonIK3D" parent="Avatar/female_avatar/Armature/GeneralSkeleton" index="7"]
+process_priority = 1
+root_bone = &"RightUpperArm"
+tip_bone = &"RightHand"
+use_magnet = true
+magnet = Vector3(-2, 0, -2)
+target_node = NodePath("../../../../../XROrigin3D/OpenXRHandRight/IKTarget")
+
+[editable path="Avatar/female_avatar"]

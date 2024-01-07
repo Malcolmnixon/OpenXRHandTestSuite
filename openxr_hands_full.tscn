@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://df7p4pkjsaqi6"]
+
+[ext_resource type="PackedScene" uid="uid://fsafa2d7s4rp" path="res://assets/openxr_hand_full/hand_l.gltf" id="1_j7rth"]
+[ext_resource type="PackedScene" uid="uid://bcde5cjw7rgd5" path="res://assets/openxr_hand_full/hand_r.gltf" id="2_aetlo"]
+[ext_resource type="PackedScene" uid="uid://3d4p3i74knje" path="res://start_xr.tscn" id="3_4jgqt"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5htwc"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_a8xlk"]
+sky_material = SubResource("ProceduralSkyMaterial_5htwc")
+
+[sub_resource type="Environment" id="Environment_cny28"]
+background_mode = 2
+sky = SubResource("Sky_a8xlk")
+tonemap_mode = 2
+
+[node name="OpenXRHandsFull" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cny28")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+
+[node name="OpenXRHandLeft" type="OpenXRHand" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 1, 0)
+hand_skeleton = NodePath("hand_l/Armature/Skeleton3D")
+
+[node name="hand_l" parent="XROrigin3D/OpenXRHandLeft" instance=ExtResource("1_j7rth")]
+
+[node name="OpenXRHandRight" type="OpenXRHand" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 1, 0)
+hand = 1
+hand_skeleton = NodePath("hand_r/Armature/Skeleton3D")
+
+[node name="hand_r" parent="XROrigin3D/OpenXRHandRight" instance=ExtResource("2_aetlo")]
+
+[node name="StartXR" parent="." instance=ExtResource("3_4jgqt")]
+
+[editable path="XROrigin3D/OpenXRHandLeft/hand_l"]
+[editable path="XROrigin3D/OpenXRHandRight/hand_r"]

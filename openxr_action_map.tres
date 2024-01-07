@@ -1,0 +1,885 @@
+[gd_resource type="OpenXRActionMap" load_steps=210 format=3 uid="uid://bp1301dirvjdt"]
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_dpro7"]
+resource_name = "trigger"
+localized_name = "Trigger"
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_b0nrk"]
+resource_name = "trigger_click"
+localized_name = "Trigger click"
+action_type = 0
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_56sir"]
+resource_name = "trigger_touch"
+localized_name = "Trigger touching"
+action_type = 0
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_own42"]
+resource_name = "grip"
+localized_name = "Grip"
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_tj7k0"]
+resource_name = "grip_click"
+localized_name = "Grip click"
+action_type = 0
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_nxmfb"]
+resource_name = "grip_force"
+localized_name = "Grip force"
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_e2dpp"]
+resource_name = "primary"
+localized_name = "Primary joystick/thumbstick/trackpad"
+action_type = 2
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_2go4k"]
+resource_name = "primary_click"
+localized_name = "Primary joystick/thumbstick/trackpad click"
+action_type = 0
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_qlvgr"]
+resource_name = "primary_touch"
+localized_name = "Primary joystick/thumbstick/trackpad touching"
+action_type = 0
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_fntpa"]
+resource_name = "secondary"
+localized_name = "Secondary joystick/thumbstick/trackpad"
+action_type = 2
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_hmqsn"]
+resource_name = "secondary_click"
+localized_name = "Secondary joystick/thumbstick/trackpad click"
+action_type = 0
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_iiqfy"]
+resource_name = "secondary_touch"
+localized_name = "Secondary joystick/thumbstick/trackpad touching"
+action_type = 0
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_suyq6"]
+resource_name = "menu_button"
+localized_name = "Menu button"
+action_type = 0
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_fyf0o"]
+resource_name = "select_button"
+localized_name = "Select button"
+action_type = 0
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_y6tvb"]
+resource_name = "ax_button"
+localized_name = "A/X button"
+action_type = 0
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_2k64u"]
+resource_name = "ax_touch"
+localized_name = "A/X touching"
+action_type = 0
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_62w35"]
+resource_name = "by_button"
+localized_name = "B/Y button"
+action_type = 0
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_lu485"]
+resource_name = "by_touch"
+localized_name = "B/Y touching"
+action_type = 0
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_1ovmp"]
+resource_name = "default_pose"
+localized_name = "Default pose"
+action_type = 3
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right", "/user/vive_tracker_htcx/role/left_foot", "/user/vive_tracker_htcx/role/right_foot", "/user/vive_tracker_htcx/role/left_shoulder", "/user/vive_tracker_htcx/role/right_shoulder", "/user/vive_tracker_htcx/role/left_elbow", "/user/vive_tracker_htcx/role/right_elbow", "/user/vive_tracker_htcx/role/left_knee", "/user/vive_tracker_htcx/role/right_knee", "/user/vive_tracker_htcx/role/waist", "/user/vive_tracker_htcx/role/chest", "/user/vive_tracker_htcx/role/camera", "/user/vive_tracker_htcx/role/keyboard", "/user/eyes_ext")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_ew883"]
+resource_name = "aim_pose"
+localized_name = "Aim pose"
+action_type = 3
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_eq4xp"]
+resource_name = "grip_pose"
+localized_name = "Grip pose"
+action_type = 3
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_0ho56"]
+resource_name = "palm_pose"
+localized_name = "Palm pose"
+action_type = 3
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right")
+
+[sub_resource type="OpenXRAction" id="OpenXRAction_22j06"]
+resource_name = "haptic"
+localized_name = "Haptic"
+action_type = 4
+toplevel_paths = PackedStringArray("/user/hand/left", "/user/hand/right", "/user/vive_tracker_htcx/role/left_foot", "/user/vive_tracker_htcx/role/right_foot", "/user/vive_tracker_htcx/role/left_shoulder", "/user/vive_tracker_htcx/role/right_shoulder", "/user/vive_tracker_htcx/role/left_elbow", "/user/vive_tracker_htcx/role/right_elbow", "/user/vive_tracker_htcx/role/left_knee", "/user/vive_tracker_htcx/role/right_knee", "/user/vive_tracker_htcx/role/waist", "/user/vive_tracker_htcx/role/chest", "/user/vive_tracker_htcx/role/camera", "/user/vive_tracker_htcx/role/keyboard")
+
+[sub_resource type="OpenXRActionSet" id="OpenXRActionSet_3x30t"]
+resource_name = "godot"
+localized_name = "Godot action set"
+actions = [SubResource("OpenXRAction_dpro7"), SubResource("OpenXRAction_b0nrk"), SubResource("OpenXRAction_56sir"), SubResource("OpenXRAction_own42"), SubResource("OpenXRAction_tj7k0"), SubResource("OpenXRAction_nxmfb"), SubResource("OpenXRAction_e2dpp"), SubResource("OpenXRAction_2go4k"), SubResource("OpenXRAction_qlvgr"), SubResource("OpenXRAction_fntpa"), SubResource("OpenXRAction_hmqsn"), SubResource("OpenXRAction_iiqfy"), SubResource("OpenXRAction_suyq6"), SubResource("OpenXRAction_fyf0o"), SubResource("OpenXRAction_y6tvb"), SubResource("OpenXRAction_2k64u"), SubResource("OpenXRAction_62w35"), SubResource("OpenXRAction_lu485"), SubResource("OpenXRAction_1ovmp"), SubResource("OpenXRAction_ew883"), SubResource("OpenXRAction_eq4xp"), SubResource("OpenXRAction_0ho56"), SubResource("OpenXRAction_22j06")]
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_otgcc"]
+action = SubResource("OpenXRAction_1ovmp")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_jy5vc"]
+action = SubResource("OpenXRAction_ew883")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_bkd3p"]
+action = SubResource("OpenXRAction_eq4xp")
+paths = PackedStringArray("/user/hand/left/input/grip/pose", "/user/hand/right/input/grip/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_djgkv"]
+action = SubResource("OpenXRAction_0ho56")
+paths = PackedStringArray("/user/hand/left/input/palm_ext/pose", "/user/hand/right/input/palm_ext/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_4t8rw"]
+action = SubResource("OpenXRAction_suyq6")
+paths = PackedStringArray("/user/hand/left/input/menu/click", "/user/hand/right/input/menu/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_cuw1r"]
+action = SubResource("OpenXRAction_fyf0o")
+paths = PackedStringArray("/user/hand/left/input/select/click", "/user/hand/right/input/select/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_pru4u"]
+action = SubResource("OpenXRAction_22j06")
+paths = PackedStringArray("/user/hand/left/output/haptic", "/user/hand/right/output/haptic")
+
+[sub_resource type="OpenXRInteractionProfile" id="OpenXRInteractionProfile_7pshp"]
+interaction_profile_path = "/interaction_profiles/khr/simple_controller"
+bindings = [SubResource("OpenXRIPBinding_otgcc"), SubResource("OpenXRIPBinding_jy5vc"), SubResource("OpenXRIPBinding_bkd3p"), SubResource("OpenXRIPBinding_djgkv"), SubResource("OpenXRIPBinding_4t8rw"), SubResource("OpenXRIPBinding_cuw1r"), SubResource("OpenXRIPBinding_pru4u")]
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_q31b4"]
+action = SubResource("OpenXRAction_1ovmp")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_kwt4v"]
+action = SubResource("OpenXRAction_ew883")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_8revr"]
+action = SubResource("OpenXRAction_eq4xp")
+paths = PackedStringArray("/user/hand/left/input/grip/pose", "/user/hand/right/input/grip/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_r2pc2"]
+action = SubResource("OpenXRAction_0ho56")
+paths = PackedStringArray("/user/hand/left/input/palm_ext/pose", "/user/hand/right/input/palm_ext/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_cy00x"]
+action = SubResource("OpenXRAction_suyq6")
+paths = PackedStringArray("/user/hand/left/input/menu/click", "/user/hand/right/input/menu/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_qi2cn"]
+action = SubResource("OpenXRAction_fyf0o")
+paths = PackedStringArray("/user/hand/left/input/system/click", "/user/hand/right/input/system/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_x3q62"]
+action = SubResource("OpenXRAction_dpro7")
+paths = PackedStringArray("/user/hand/left/input/trigger/value", "/user/hand/right/input/trigger/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_y7egg"]
+action = SubResource("OpenXRAction_b0nrk")
+paths = PackedStringArray("/user/hand/left/input/trigger/click", "/user/hand/right/input/trigger/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_s58q7"]
+action = SubResource("OpenXRAction_own42")
+paths = PackedStringArray("/user/hand/left/input/squeeze/click", "/user/hand/right/input/squeeze/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_03hry"]
+action = SubResource("OpenXRAction_tj7k0")
+paths = PackedStringArray("/user/hand/left/input/squeeze/click", "/user/hand/right/input/squeeze/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_c34uu"]
+action = SubResource("OpenXRAction_e2dpp")
+paths = PackedStringArray("/user/hand/left/input/trackpad", "/user/hand/right/input/trackpad")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_gg8ge"]
+action = SubResource("OpenXRAction_2go4k")
+paths = PackedStringArray("/user/hand/left/input/trackpad/click", "/user/hand/right/input/trackpad/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_gtthm"]
+action = SubResource("OpenXRAction_qlvgr")
+paths = PackedStringArray("/user/hand/left/input/trackpad/touch", "/user/hand/right/input/trackpad/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_t4ivb"]
+action = SubResource("OpenXRAction_22j06")
+paths = PackedStringArray("/user/hand/left/output/haptic", "/user/hand/right/output/haptic")
+
+[sub_resource type="OpenXRInteractionProfile" id="OpenXRInteractionProfile_6tltj"]
+interaction_profile_path = "/interaction_profiles/htc/vive_controller"
+bindings = [SubResource("OpenXRIPBinding_q31b4"), SubResource("OpenXRIPBinding_kwt4v"), SubResource("OpenXRIPBinding_8revr"), SubResource("OpenXRIPBinding_r2pc2"), SubResource("OpenXRIPBinding_cy00x"), SubResource("OpenXRIPBinding_qi2cn"), SubResource("OpenXRIPBinding_x3q62"), SubResource("OpenXRIPBinding_y7egg"), SubResource("OpenXRIPBinding_s58q7"), SubResource("OpenXRIPBinding_03hry"), SubResource("OpenXRIPBinding_c34uu"), SubResource("OpenXRIPBinding_gg8ge"), SubResource("OpenXRIPBinding_gtthm"), SubResource("OpenXRIPBinding_t4ivb")]
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_eohtk"]
+action = SubResource("OpenXRAction_1ovmp")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_tvfbj"]
+action = SubResource("OpenXRAction_ew883")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_bufas"]
+action = SubResource("OpenXRAction_eq4xp")
+paths = PackedStringArray("/user/hand/left/input/grip/pose", "/user/hand/right/input/grip/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_qmoeh"]
+action = SubResource("OpenXRAction_0ho56")
+paths = PackedStringArray("/user/hand/left/input/palm_ext/pose", "/user/hand/right/input/palm_ext/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_gjqfg"]
+action = SubResource("OpenXRAction_suyq6")
+paths = PackedStringArray("/user/hand/left/input/menu/click", "/user/hand/right/input/menu/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_2036d"]
+action = SubResource("OpenXRAction_dpro7")
+paths = PackedStringArray("/user/hand/left/input/trigger/value", "/user/hand/right/input/trigger/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_fhhre"]
+action = SubResource("OpenXRAction_b0nrk")
+paths = PackedStringArray("/user/hand/left/input/trigger/value", "/user/hand/right/input/trigger/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_sla0e"]
+action = SubResource("OpenXRAction_own42")
+paths = PackedStringArray("/user/hand/left/input/squeeze/click", "/user/hand/right/input/squeeze/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_ym1ho"]
+action = SubResource("OpenXRAction_tj7k0")
+paths = PackedStringArray("/user/hand/left/input/squeeze/click", "/user/hand/right/input/squeeze/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_cb8tm"]
+action = SubResource("OpenXRAction_e2dpp")
+paths = PackedStringArray("/user/hand/left/input/thumbstick", "/user/hand/right/input/thumbstick")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_qblh5"]
+action = SubResource("OpenXRAction_2go4k")
+paths = PackedStringArray("/user/hand/left/input/thumbstick/click", "/user/hand/right/input/thumbstick/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_6wqf7"]
+action = SubResource("OpenXRAction_fntpa")
+paths = PackedStringArray("/user/hand/left/input/trackpad", "/user/hand/right/input/trackpad")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_oqwhm"]
+action = SubResource("OpenXRAction_hmqsn")
+paths = PackedStringArray("/user/hand/left/input/trackpad/click", "/user/hand/right/input/trackpad/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_sk8j6"]
+action = SubResource("OpenXRAction_iiqfy")
+paths = PackedStringArray("/user/hand/left/input/trackpad/touch", "/user/hand/right/input/trackpad/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_xxecc"]
+action = SubResource("OpenXRAction_22j06")
+paths = PackedStringArray("/user/hand/left/output/haptic", "/user/hand/right/output/haptic")
+
+[sub_resource type="OpenXRInteractionProfile" id="OpenXRInteractionProfile_b06xk"]
+interaction_profile_path = "/interaction_profiles/microsoft/motion_controller"
+bindings = [SubResource("OpenXRIPBinding_eohtk"), SubResource("OpenXRIPBinding_tvfbj"), SubResource("OpenXRIPBinding_bufas"), SubResource("OpenXRIPBinding_qmoeh"), SubResource("OpenXRIPBinding_gjqfg"), SubResource("OpenXRIPBinding_2036d"), SubResource("OpenXRIPBinding_fhhre"), SubResource("OpenXRIPBinding_sla0e"), SubResource("OpenXRIPBinding_ym1ho"), SubResource("OpenXRIPBinding_cb8tm"), SubResource("OpenXRIPBinding_qblh5"), SubResource("OpenXRIPBinding_6wqf7"), SubResource("OpenXRIPBinding_oqwhm"), SubResource("OpenXRIPBinding_sk8j6"), SubResource("OpenXRIPBinding_xxecc")]
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_xn7ew"]
+action = SubResource("OpenXRAction_1ovmp")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_afve2"]
+action = SubResource("OpenXRAction_ew883")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_jp8lw"]
+action = SubResource("OpenXRAction_eq4xp")
+paths = PackedStringArray("/user/hand/left/input/grip/pose", "/user/hand/right/input/grip/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_wyonb"]
+action = SubResource("OpenXRAction_0ho56")
+paths = PackedStringArray("/user/hand/left/input/palm_ext/pose", "/user/hand/right/input/palm_ext/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_0uh82"]
+action = SubResource("OpenXRAction_suyq6")
+paths = PackedStringArray("/user/hand/left/input/menu/click", "/user/hand/right/input/system/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_w10as"]
+action = SubResource("OpenXRAction_y6tvb")
+paths = PackedStringArray("/user/hand/left/input/x/click", "/user/hand/right/input/a/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_dnj1q"]
+action = SubResource("OpenXRAction_2k64u")
+paths = PackedStringArray("/user/hand/left/input/x/touch", "/user/hand/right/input/a/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_n7h0g"]
+action = SubResource("OpenXRAction_62w35")
+paths = PackedStringArray("/user/hand/left/input/y/click", "/user/hand/right/input/b/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_2grsi"]
+action = SubResource("OpenXRAction_lu485")
+paths = PackedStringArray("/user/hand/left/input/y/touch", "/user/hand/right/input/b/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_rc14q"]
+action = SubResource("OpenXRAction_dpro7")
+paths = PackedStringArray("/user/hand/left/input/trigger/value", "/user/hand/right/input/trigger/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_nsxst"]
+action = SubResource("OpenXRAction_b0nrk")
+paths = PackedStringArray("/user/hand/left/input/trigger/value", "/user/hand/right/input/trigger/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_s4xy5"]
+action = SubResource("OpenXRAction_56sir")
+paths = PackedStringArray("/user/hand/left/input/trigger/touch", "/user/hand/right/input/trigger/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_0kg3h"]
+action = SubResource("OpenXRAction_own42")
+paths = PackedStringArray("/user/hand/left/input/squeeze/value", "/user/hand/right/input/squeeze/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_lkyul"]
+action = SubResource("OpenXRAction_tj7k0")
+paths = PackedStringArray("/user/hand/left/input/squeeze/value", "/user/hand/right/input/squeeze/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_2b87l"]
+action = SubResource("OpenXRAction_e2dpp")
+paths = PackedStringArray("/user/hand/left/input/thumbstick", "/user/hand/right/input/thumbstick")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_hsvm3"]
+action = SubResource("OpenXRAction_2go4k")
+paths = PackedStringArray("/user/hand/left/input/thumbstick/click", "/user/hand/right/input/thumbstick/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_aqbhu"]
+action = SubResource("OpenXRAction_qlvgr")
+paths = PackedStringArray("/user/hand/left/input/thumbstick/touch", "/user/hand/right/input/thumbstick/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_6semu"]
+action = SubResource("OpenXRAction_22j06")
+paths = PackedStringArray("/user/hand/left/output/haptic", "/user/hand/right/output/haptic")
+
+[sub_resource type="OpenXRInteractionProfile" id="OpenXRInteractionProfile_jxaqp"]
+interaction_profile_path = "/interaction_profiles/oculus/touch_controller"
+bindings = [SubResource("OpenXRIPBinding_xn7ew"), SubResource("OpenXRIPBinding_afve2"), SubResource("OpenXRIPBinding_jp8lw"), SubResource("OpenXRIPBinding_wyonb"), SubResource("OpenXRIPBinding_0uh82"), SubResource("OpenXRIPBinding_w10as"), SubResource("OpenXRIPBinding_dnj1q"), SubResource("OpenXRIPBinding_n7h0g"), SubResource("OpenXRIPBinding_2grsi"), SubResource("OpenXRIPBinding_rc14q"), SubResource("OpenXRIPBinding_nsxst"), SubResource("OpenXRIPBinding_s4xy5"), SubResource("OpenXRIPBinding_0kg3h"), SubResource("OpenXRIPBinding_lkyul"), SubResource("OpenXRIPBinding_2b87l"), SubResource("OpenXRIPBinding_hsvm3"), SubResource("OpenXRIPBinding_aqbhu"), SubResource("OpenXRIPBinding_6semu")]
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_axp26"]
+action = SubResource("OpenXRAction_1ovmp")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_urbhk"]
+action = SubResource("OpenXRAction_ew883")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_2l0d4"]
+action = SubResource("OpenXRAction_eq4xp")
+paths = PackedStringArray("/user/hand/left/input/grip/pose", "/user/hand/right/input/grip/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_270w4"]
+action = SubResource("OpenXRAction_0ho56")
+paths = PackedStringArray("/user/hand/left/input/palm_ext/pose", "/user/hand/right/input/palm_ext/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_e4qpy"]
+action = SubResource("OpenXRAction_fyf0o")
+paths = PackedStringArray("/user/hand/left/input/system/click", "/user/hand/right/input/system/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_vm5cm"]
+action = SubResource("OpenXRAction_suyq6")
+paths = PackedStringArray("/user/hand/left/input/menu/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_kgc5a"]
+action = SubResource("OpenXRAction_y6tvb")
+paths = PackedStringArray("/user/hand/left/input/x/click", "/user/hand/right/input/a/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_57jql"]
+action = SubResource("OpenXRAction_2k64u")
+paths = PackedStringArray("/user/hand/left/input/x/touch", "/user/hand/right/input/a/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_dixn6"]
+action = SubResource("OpenXRAction_62w35")
+paths = PackedStringArray("/user/hand/left/input/y/click", "/user/hand/right/input/b/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_adiy3"]
+action = SubResource("OpenXRAction_lu485")
+paths = PackedStringArray("/user/hand/left/input/y/touch", "/user/hand/right/input/b/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_1enaa"]
+action = SubResource("OpenXRAction_dpro7")
+paths = PackedStringArray("/user/hand/left/input/trigger/value", "/user/hand/right/input/trigger/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_6cdsv"]
+action = SubResource("OpenXRAction_b0nrk")
+paths = PackedStringArray("/user/hand/left/input/trigger/value", "/user/hand/right/input/trigger/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_oydg1"]
+action = SubResource("OpenXRAction_56sir")
+paths = PackedStringArray("/user/hand/left/input/trigger/touch", "/user/hand/right/input/trigger/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_52nr2"]
+action = SubResource("OpenXRAction_own42")
+paths = PackedStringArray("/user/hand/left/input/squeeze/value", "/user/hand/right/input/squeeze/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_xnmbt"]
+action = SubResource("OpenXRAction_tj7k0")
+paths = PackedStringArray("/user/hand/left/input/squeeze/value", "/user/hand/right/input/squeeze/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_4v1fv"]
+action = SubResource("OpenXRAction_e2dpp")
+paths = PackedStringArray("/user/hand/left/input/thumbstick", "/user/hand/right/input/thumbstick")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_21wpk"]
+action = SubResource("OpenXRAction_2go4k")
+paths = PackedStringArray("/user/hand/left/input/thumbstick/click", "/user/hand/right/input/thumbstick/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_fv043"]
+action = SubResource("OpenXRAction_qlvgr")
+paths = PackedStringArray("/user/hand/left/input/thumbstick/touch", "/user/hand/right/input/thumbstick/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_cl2js"]
+action = SubResource("OpenXRAction_22j06")
+paths = PackedStringArray("/user/hand/left/output/haptic", "/user/hand/right/output/haptic")
+
+[sub_resource type="OpenXRInteractionProfile" id="OpenXRInteractionProfile_o6fcu"]
+interaction_profile_path = "/interaction_profiles/bytedance/pico4_controller"
+bindings = [SubResource("OpenXRIPBinding_axp26"), SubResource("OpenXRIPBinding_urbhk"), SubResource("OpenXRIPBinding_2l0d4"), SubResource("OpenXRIPBinding_270w4"), SubResource("OpenXRIPBinding_e4qpy"), SubResource("OpenXRIPBinding_vm5cm"), SubResource("OpenXRIPBinding_kgc5a"), SubResource("OpenXRIPBinding_57jql"), SubResource("OpenXRIPBinding_dixn6"), SubResource("OpenXRIPBinding_adiy3"), SubResource("OpenXRIPBinding_1enaa"), SubResource("OpenXRIPBinding_6cdsv"), SubResource("OpenXRIPBinding_oydg1"), SubResource("OpenXRIPBinding_52nr2"), SubResource("OpenXRIPBinding_xnmbt"), SubResource("OpenXRIPBinding_4v1fv"), SubResource("OpenXRIPBinding_21wpk"), SubResource("OpenXRIPBinding_fv043"), SubResource("OpenXRIPBinding_cl2js")]
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_86vxp"]
+action = SubResource("OpenXRAction_1ovmp")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_e2ity"]
+action = SubResource("OpenXRAction_ew883")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_mjkph"]
+action = SubResource("OpenXRAction_eq4xp")
+paths = PackedStringArray("/user/hand/left/input/grip/pose", "/user/hand/right/input/grip/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_cohr3"]
+action = SubResource("OpenXRAction_0ho56")
+paths = PackedStringArray("/user/hand/left/input/palm_ext/pose", "/user/hand/right/input/palm_ext/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_idt7x"]
+action = SubResource("OpenXRAction_suyq6")
+paths = PackedStringArray("/user/hand/left/input/system/click", "/user/hand/right/input/system/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_swjqx"]
+action = SubResource("OpenXRAction_y6tvb")
+paths = PackedStringArray("/user/hand/left/input/a/click", "/user/hand/right/input/a/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_mlxh8"]
+action = SubResource("OpenXRAction_2k64u")
+paths = PackedStringArray("/user/hand/left/input/a/touch", "/user/hand/right/input/a/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_152so"]
+action = SubResource("OpenXRAction_62w35")
+paths = PackedStringArray("/user/hand/left/input/b/click", "/user/hand/right/input/b/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_k35et"]
+action = SubResource("OpenXRAction_lu485")
+paths = PackedStringArray("/user/hand/left/input/b/touch", "/user/hand/right/input/b/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_qxqw5"]
+action = SubResource("OpenXRAction_dpro7")
+paths = PackedStringArray("/user/hand/left/input/trigger/value", "/user/hand/right/input/trigger/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_cghp8"]
+action = SubResource("OpenXRAction_b0nrk")
+paths = PackedStringArray("/user/hand/left/input/trigger/click", "/user/hand/right/input/trigger/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_prkat"]
+action = SubResource("OpenXRAction_56sir")
+paths = PackedStringArray("/user/hand/left/input/trigger/touch", "/user/hand/right/input/trigger/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_lx7lw"]
+action = SubResource("OpenXRAction_own42")
+paths = PackedStringArray("/user/hand/left/input/squeeze/value", "/user/hand/right/input/squeeze/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_73di7"]
+action = SubResource("OpenXRAction_tj7k0")
+paths = PackedStringArray("/user/hand/left/input/squeeze/value", "/user/hand/right/input/squeeze/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_igosv"]
+action = SubResource("OpenXRAction_nxmfb")
+paths = PackedStringArray("/user/hand/left/input/squeeze/force", "/user/hand/right/input/squeeze/force")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_73nbf"]
+action = SubResource("OpenXRAction_e2dpp")
+paths = PackedStringArray("/user/hand/left/input/thumbstick", "/user/hand/right/input/thumbstick")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_b66ig"]
+action = SubResource("OpenXRAction_2go4k")
+paths = PackedStringArray("/user/hand/left/input/thumbstick/click", "/user/hand/right/input/thumbstick/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_xvq8d"]
+action = SubResource("OpenXRAction_qlvgr")
+paths = PackedStringArray("/user/hand/left/input/thumbstick/touch", "/user/hand/right/input/thumbstick/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_dgvgc"]
+action = SubResource("OpenXRAction_fntpa")
+paths = PackedStringArray("/user/hand/left/input/trackpad", "/user/hand/right/input/trackpad")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_mxqm3"]
+action = SubResource("OpenXRAction_hmqsn")
+paths = PackedStringArray("/user/hand/left/input/trackpad/force", "/user/hand/right/input/trackpad/force")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_6g4yf"]
+action = SubResource("OpenXRAction_iiqfy")
+paths = PackedStringArray("/user/hand/left/input/trackpad/touch", "/user/hand/right/input/trackpad/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_lygqn"]
+action = SubResource("OpenXRAction_22j06")
+paths = PackedStringArray("/user/hand/left/output/haptic", "/user/hand/right/output/haptic")
+
+[sub_resource type="OpenXRInteractionProfile" id="OpenXRInteractionProfile_rlpij"]
+interaction_profile_path = "/interaction_profiles/valve/index_controller"
+bindings = [SubResource("OpenXRIPBinding_86vxp"), SubResource("OpenXRIPBinding_e2ity"), SubResource("OpenXRIPBinding_mjkph"), SubResource("OpenXRIPBinding_cohr3"), SubResource("OpenXRIPBinding_idt7x"), SubResource("OpenXRIPBinding_swjqx"), SubResource("OpenXRIPBinding_mlxh8"), SubResource("OpenXRIPBinding_152so"), SubResource("OpenXRIPBinding_k35et"), SubResource("OpenXRIPBinding_qxqw5"), SubResource("OpenXRIPBinding_cghp8"), SubResource("OpenXRIPBinding_prkat"), SubResource("OpenXRIPBinding_lx7lw"), SubResource("OpenXRIPBinding_73di7"), SubResource("OpenXRIPBinding_igosv"), SubResource("OpenXRIPBinding_73nbf"), SubResource("OpenXRIPBinding_b66ig"), SubResource("OpenXRIPBinding_xvq8d"), SubResource("OpenXRIPBinding_dgvgc"), SubResource("OpenXRIPBinding_mxqm3"), SubResource("OpenXRIPBinding_6g4yf"), SubResource("OpenXRIPBinding_lygqn")]
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_1f1fl"]
+action = SubResource("OpenXRAction_1ovmp")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_4grvl"]
+action = SubResource("OpenXRAction_ew883")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_wvn1l"]
+action = SubResource("OpenXRAction_eq4xp")
+paths = PackedStringArray("/user/hand/left/input/grip/pose", "/user/hand/right/input/grip/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_ncg56"]
+action = SubResource("OpenXRAction_0ho56")
+paths = PackedStringArray("/user/hand/left/input/palm_ext/pose", "/user/hand/right/input/palm_ext/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_p4l4p"]
+action = SubResource("OpenXRAction_suyq6")
+paths = PackedStringArray("/user/hand/left/input/menu/click", "/user/hand/right/input/menu/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_6dyfa"]
+action = SubResource("OpenXRAction_y6tvb")
+paths = PackedStringArray("/user/hand/left/input/x/click", "/user/hand/right/input/a/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_nnak4"]
+action = SubResource("OpenXRAction_62w35")
+paths = PackedStringArray("/user/hand/left/input/y/click", "/user/hand/right/input/b/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_dbwyl"]
+action = SubResource("OpenXRAction_dpro7")
+paths = PackedStringArray("/user/hand/left/input/trigger/value", "/user/hand/right/input/trigger/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_lgbb5"]
+action = SubResource("OpenXRAction_b0nrk")
+paths = PackedStringArray("/user/hand/left/input/trigger/value", "/user/hand/right/input/trigger/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_ecdlw"]
+action = SubResource("OpenXRAction_own42")
+paths = PackedStringArray("/user/hand/left/input/squeeze/value", "/user/hand/right/input/squeeze/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_8m32c"]
+action = SubResource("OpenXRAction_tj7k0")
+paths = PackedStringArray("/user/hand/left/input/squeeze/value", "/user/hand/right/input/squeeze/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_0gxu2"]
+action = SubResource("OpenXRAction_e2dpp")
+paths = PackedStringArray("/user/hand/left/input/thumbstick", "/user/hand/right/input/thumbstick")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_oc3fc"]
+action = SubResource("OpenXRAction_2go4k")
+paths = PackedStringArray("/user/hand/left/input/thumbstick/click", "/user/hand/right/input/thumbstick/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_wckyu"]
+action = SubResource("OpenXRAction_22j06")
+paths = PackedStringArray("/user/hand/left/output/haptic", "/user/hand/right/output/haptic")
+
+[sub_resource type="OpenXRInteractionProfile" id="OpenXRInteractionProfile_roodw"]
+interaction_profile_path = "/interaction_profiles/hp/mixed_reality_controller"
+bindings = [SubResource("OpenXRIPBinding_1f1fl"), SubResource("OpenXRIPBinding_4grvl"), SubResource("OpenXRIPBinding_wvn1l"), SubResource("OpenXRIPBinding_ncg56"), SubResource("OpenXRIPBinding_p4l4p"), SubResource("OpenXRIPBinding_6dyfa"), SubResource("OpenXRIPBinding_nnak4"), SubResource("OpenXRIPBinding_dbwyl"), SubResource("OpenXRIPBinding_lgbb5"), SubResource("OpenXRIPBinding_ecdlw"), SubResource("OpenXRIPBinding_8m32c"), SubResource("OpenXRIPBinding_0gxu2"), SubResource("OpenXRIPBinding_oc3fc"), SubResource("OpenXRIPBinding_wckyu")]
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_f74pk"]
+action = SubResource("OpenXRAction_1ovmp")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_vhpfr"]
+action = SubResource("OpenXRAction_ew883")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_yyfky"]
+action = SubResource("OpenXRAction_eq4xp")
+paths = PackedStringArray("/user/hand/left/input/grip/pose", "/user/hand/right/input/grip/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_75wtn"]
+action = SubResource("OpenXRAction_0ho56")
+paths = PackedStringArray("/user/hand/left/input/palm_ext/pose", "/user/hand/right/input/palm_ext/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_a5cvp"]
+action = SubResource("OpenXRAction_suyq6")
+paths = PackedStringArray("/user/hand/left/input/menu/click", "/user/hand/right/input/menu/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_sxy3a"]
+action = SubResource("OpenXRAction_dpro7")
+paths = PackedStringArray("/user/hand/left/input/trigger/value", "/user/hand/right/input/trigger/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_565u3"]
+action = SubResource("OpenXRAction_b0nrk")
+paths = PackedStringArray("/user/hand/left/input/trigger/value", "/user/hand/right/input/trigger/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_vt4ap"]
+action = SubResource("OpenXRAction_own42")
+paths = PackedStringArray("/user/hand/left/input/squeeze/click", "/user/hand/right/input/squeeze/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_ojcwv"]
+action = SubResource("OpenXRAction_tj7k0")
+paths = PackedStringArray("/user/hand/left/input/squeeze/click", "/user/hand/right/input/squeeze/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_30ll0"]
+action = SubResource("OpenXRAction_e2dpp")
+paths = PackedStringArray("/user/hand/left/input/thumbstick", "/user/hand/right/input/thumbstick")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_u6rwc"]
+action = SubResource("OpenXRAction_2go4k")
+paths = PackedStringArray("/user/hand/left/input/thumbstick/click", "/user/hand/right/input/thumbstick/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_pnflu"]
+action = SubResource("OpenXRAction_fntpa")
+paths = PackedStringArray("/user/hand/left/input/trackpad", "/user/hand/right/input/trackpad")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_u1588"]
+action = SubResource("OpenXRAction_hmqsn")
+paths = PackedStringArray("/user/hand/left/input/trackpad/click", "/user/hand/right/input/trackpad/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_uo4qk"]
+action = SubResource("OpenXRAction_iiqfy")
+paths = PackedStringArray("/user/hand/left/input/trackpad/touch", "/user/hand/right/input/trackpad/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_0xaom"]
+action = SubResource("OpenXRAction_22j06")
+paths = PackedStringArray("/user/hand/left/output/haptic", "/user/hand/right/output/haptic")
+
+[sub_resource type="OpenXRInteractionProfile" id="OpenXRInteractionProfile_1ky2v"]
+interaction_profile_path = "/interaction_profiles/samsung/odyssey_controller"
+bindings = [SubResource("OpenXRIPBinding_f74pk"), SubResource("OpenXRIPBinding_vhpfr"), SubResource("OpenXRIPBinding_yyfky"), SubResource("OpenXRIPBinding_75wtn"), SubResource("OpenXRIPBinding_a5cvp"), SubResource("OpenXRIPBinding_sxy3a"), SubResource("OpenXRIPBinding_565u3"), SubResource("OpenXRIPBinding_vt4ap"), SubResource("OpenXRIPBinding_ojcwv"), SubResource("OpenXRIPBinding_30ll0"), SubResource("OpenXRIPBinding_u6rwc"), SubResource("OpenXRIPBinding_pnflu"), SubResource("OpenXRIPBinding_u1588"), SubResource("OpenXRIPBinding_uo4qk"), SubResource("OpenXRIPBinding_0xaom")]
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_pegrk"]
+action = SubResource("OpenXRAction_1ovmp")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_2qyfc"]
+action = SubResource("OpenXRAction_ew883")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_dkvhx"]
+action = SubResource("OpenXRAction_eq4xp")
+paths = PackedStringArray("/user/hand/left/input/grip/pose", "/user/hand/right/input/grip/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_eo5ru"]
+action = SubResource("OpenXRAction_0ho56")
+paths = PackedStringArray("/user/hand/left/input/palm_ext/pose", "/user/hand/right/input/palm_ext/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_uy87m"]
+action = SubResource("OpenXRAction_suyq6")
+paths = PackedStringArray("/user/hand/left/input/menu/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_syqgl"]
+action = SubResource("OpenXRAction_fyf0o")
+paths = PackedStringArray("/user/hand/right/input/system/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_udt5q"]
+action = SubResource("OpenXRAction_y6tvb")
+paths = PackedStringArray("/user/hand/left/input/x/click", "/user/hand/right/input/a/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_dbx1r"]
+action = SubResource("OpenXRAction_62w35")
+paths = PackedStringArray("/user/hand/left/input/y/click", "/user/hand/right/input/b/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_mncu6"]
+action = SubResource("OpenXRAction_dpro7")
+paths = PackedStringArray("/user/hand/left/input/trigger/value", "/user/hand/right/input/trigger/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_mpnjb"]
+action = SubResource("OpenXRAction_b0nrk")
+paths = PackedStringArray("/user/hand/left/input/trigger/click", "/user/hand/right/input/trigger/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_27foa"]
+action = SubResource("OpenXRAction_own42")
+paths = PackedStringArray("/user/hand/left/input/squeeze/click", "/user/hand/right/input/squeeze/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_dqh2n"]
+action = SubResource("OpenXRAction_tj7k0")
+paths = PackedStringArray("/user/hand/left/input/squeeze/click", "/user/hand/right/input/squeeze/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_t4kmy"]
+action = SubResource("OpenXRAction_e2dpp")
+paths = PackedStringArray("/user/hand/left/input/thumbstick", "/user/hand/right/input/thumbstick")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_lstid"]
+action = SubResource("OpenXRAction_2go4k")
+paths = PackedStringArray("/user/hand/left/input/thumbstick/click", "/user/hand/right/input/thumbstick/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_55gbv"]
+action = SubResource("OpenXRAction_qlvgr")
+paths = PackedStringArray("/user/hand/left/input/thumbstick/touch", "/user/hand/right/input/thumbstick/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_j36ev"]
+action = SubResource("OpenXRAction_22j06")
+paths = PackedStringArray("/user/hand/left/output/haptic", "/user/hand/right/output/haptic")
+
+[sub_resource type="OpenXRInteractionProfile" id="OpenXRInteractionProfile_i5rcb"]
+interaction_profile_path = "/interaction_profiles/htc/vive_cosmos_controller"
+bindings = [SubResource("OpenXRIPBinding_pegrk"), SubResource("OpenXRIPBinding_2qyfc"), SubResource("OpenXRIPBinding_dkvhx"), SubResource("OpenXRIPBinding_eo5ru"), SubResource("OpenXRIPBinding_uy87m"), SubResource("OpenXRIPBinding_syqgl"), SubResource("OpenXRIPBinding_udt5q"), SubResource("OpenXRIPBinding_dbx1r"), SubResource("OpenXRIPBinding_mncu6"), SubResource("OpenXRIPBinding_mpnjb"), SubResource("OpenXRIPBinding_27foa"), SubResource("OpenXRIPBinding_dqh2n"), SubResource("OpenXRIPBinding_t4kmy"), SubResource("OpenXRIPBinding_lstid"), SubResource("OpenXRIPBinding_55gbv"), SubResource("OpenXRIPBinding_j36ev")]
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_iv4dc"]
+action = SubResource("OpenXRAction_1ovmp")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_1ixka"]
+action = SubResource("OpenXRAction_ew883")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_nkby7"]
+action = SubResource("OpenXRAction_eq4xp")
+paths = PackedStringArray("/user/hand/left/input/grip/pose", "/user/hand/right/input/grip/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_88q38"]
+action = SubResource("OpenXRAction_0ho56")
+paths = PackedStringArray("/user/hand/left/input/palm_ext/pose", "/user/hand/right/input/palm_ext/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_01fup"]
+action = SubResource("OpenXRAction_suyq6")
+paths = PackedStringArray("/user/hand/left/input/menu/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_knij1"]
+action = SubResource("OpenXRAction_fyf0o")
+paths = PackedStringArray("/user/hand/right/input/system/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_axwk2"]
+action = SubResource("OpenXRAction_y6tvb")
+paths = PackedStringArray("/user/hand/left/input/x/click", "/user/hand/right/input/a/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_npcen"]
+action = SubResource("OpenXRAction_62w35")
+paths = PackedStringArray("/user/hand/left/input/y/click", "/user/hand/right/input/b/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_no2t0"]
+action = SubResource("OpenXRAction_dpro7")
+paths = PackedStringArray("/user/hand/left/input/trigger/value", "/user/hand/right/input/trigger/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_k5ilv"]
+action = SubResource("OpenXRAction_b0nrk")
+paths = PackedStringArray("/user/hand/left/input/trigger/click", "/user/hand/right/input/trigger/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_qj61j"]
+action = SubResource("OpenXRAction_56sir")
+paths = PackedStringArray("/user/hand/left/input/trigger/touch", "/user/hand/right/input/trigger/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_eyrpu"]
+action = SubResource("OpenXRAction_own42")
+paths = PackedStringArray("/user/hand/left/input/squeeze/click", "/user/hand/right/input/squeeze/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_2d0dh"]
+action = SubResource("OpenXRAction_tj7k0")
+paths = PackedStringArray("/user/hand/left/input/squeeze/click", "/user/hand/right/input/squeeze/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_2b3vq"]
+action = SubResource("OpenXRAction_e2dpp")
+paths = PackedStringArray("/user/hand/left/input/thumbstick", "/user/hand/right/input/thumbstick")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_n145g"]
+action = SubResource("OpenXRAction_2go4k")
+paths = PackedStringArray("/user/hand/left/input/thumbstick/click", "/user/hand/right/input/thumbstick/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_g11sv"]
+action = SubResource("OpenXRAction_qlvgr")
+paths = PackedStringArray("/user/hand/left/input/thumbstick/touch", "/user/hand/right/input/thumbstick/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_p2fbv"]
+action = SubResource("OpenXRAction_iiqfy")
+paths = PackedStringArray("/user/hand/left/input/thumbrest/touch", "/user/hand/right/input/thumbrest/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_axoej"]
+action = SubResource("OpenXRAction_22j06")
+paths = PackedStringArray("/user/hand/left/output/haptic", "/user/hand/right/output/haptic")
+
+[sub_resource type="OpenXRInteractionProfile" id="OpenXRInteractionProfile_xynna"]
+interaction_profile_path = "/interaction_profiles/htc/vive_focus3_controller"
+bindings = [SubResource("OpenXRIPBinding_iv4dc"), SubResource("OpenXRIPBinding_1ixka"), SubResource("OpenXRIPBinding_nkby7"), SubResource("OpenXRIPBinding_88q38"), SubResource("OpenXRIPBinding_01fup"), SubResource("OpenXRIPBinding_knij1"), SubResource("OpenXRIPBinding_axwk2"), SubResource("OpenXRIPBinding_npcen"), SubResource("OpenXRIPBinding_no2t0"), SubResource("OpenXRIPBinding_k5ilv"), SubResource("OpenXRIPBinding_qj61j"), SubResource("OpenXRIPBinding_eyrpu"), SubResource("OpenXRIPBinding_2d0dh"), SubResource("OpenXRIPBinding_2b3vq"), SubResource("OpenXRIPBinding_n145g"), SubResource("OpenXRIPBinding_g11sv"), SubResource("OpenXRIPBinding_p2fbv"), SubResource("OpenXRIPBinding_axoej")]
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_qk04m"]
+action = SubResource("OpenXRAction_1ovmp")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_14thi"]
+action = SubResource("OpenXRAction_ew883")
+paths = PackedStringArray("/user/hand/left/input/aim/pose", "/user/hand/right/input/aim/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_d6mmu"]
+action = SubResource("OpenXRAction_eq4xp")
+paths = PackedStringArray("/user/hand/left/input/grip/pose", "/user/hand/right/input/grip/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_2h6kc"]
+action = SubResource("OpenXRAction_0ho56")
+paths = PackedStringArray("/user/hand/left/input/palm_ext/pose", "/user/hand/right/input/palm_ext/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_blohy"]
+action = SubResource("OpenXRAction_suyq6")
+paths = PackedStringArray("/user/hand/left/input/home/click", "/user/hand/right/input/home/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_rjy1f"]
+action = SubResource("OpenXRAction_dpro7")
+paths = PackedStringArray("/user/hand/left/input/trigger/value", "/user/hand/right/input/trigger/value")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_f7er0"]
+action = SubResource("OpenXRAction_b0nrk")
+paths = PackedStringArray("/user/hand/left/input/trigger/click", "/user/hand/right/input/trigger/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_u23p5"]
+action = SubResource("OpenXRAction_e2dpp")
+paths = PackedStringArray("/user/hand/left/input/trackpad", "/user/hand/right/input/trackpad")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_ym6cm"]
+action = SubResource("OpenXRAction_2go4k")
+paths = PackedStringArray("/user/hand/left/input/trackpad/click", "/user/hand/right/input/trackpad/click")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_xt147"]
+action = SubResource("OpenXRAction_qlvgr")
+paths = PackedStringArray("/user/hand/left/input/trackpad/touch", "/user/hand/right/input/trackpad/touch")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_5t6q7"]
+action = SubResource("OpenXRAction_22j06")
+paths = PackedStringArray("/user/hand/left/output/haptic", "/user/hand/right/output/haptic")
+
+[sub_resource type="OpenXRInteractionProfile" id="OpenXRInteractionProfile_dwdg0"]
+interaction_profile_path = "/interaction_profiles/huawei/controller"
+bindings = [SubResource("OpenXRIPBinding_qk04m"), SubResource("OpenXRIPBinding_14thi"), SubResource("OpenXRIPBinding_d6mmu"), SubResource("OpenXRIPBinding_2h6kc"), SubResource("OpenXRIPBinding_blohy"), SubResource("OpenXRIPBinding_rjy1f"), SubResource("OpenXRIPBinding_f7er0"), SubResource("OpenXRIPBinding_u23p5"), SubResource("OpenXRIPBinding_ym6cm"), SubResource("OpenXRIPBinding_xt147"), SubResource("OpenXRIPBinding_5t6q7")]
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_xuq77"]
+action = SubResource("OpenXRAction_1ovmp")
+paths = PackedStringArray("/user/vive_tracker_htcx/role/left_foot/input/grip/pose", "/user/vive_tracker_htcx/role/right_foot/input/grip/pose", "/user/vive_tracker_htcx/role/left_shoulder/input/grip/pose", "/user/vive_tracker_htcx/role/right_shoulder/input/grip/pose", "/user/vive_tracker_htcx/role/left_elbow/input/grip/pose", "/user/vive_tracker_htcx/role/right_elbow/input/grip/pose", "/user/vive_tracker_htcx/role/left_knee/input/grip/pose", "/user/vive_tracker_htcx/role/right_knee/input/grip/pose", "/user/vive_tracker_htcx/role/waist/input/grip/pose", "/user/vive_tracker_htcx/role/chest/input/grip/pose", "/user/vive_tracker_htcx/role/camera/input/grip/pose", "/user/vive_tracker_htcx/role/keyboard/input/grip/pose")
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_0p8bb"]
+action = SubResource("OpenXRAction_22j06")
+paths = PackedStringArray("/user/vive_tracker_htcx/role/left_foot/output/haptic", "/user/vive_tracker_htcx/role/right_foot/output/haptic", "/user/vive_tracker_htcx/role/left_shoulder/output/haptic", "/user/vive_tracker_htcx/role/right_shoulder/output/haptic", "/user/vive_tracker_htcx/role/left_elbow/output/haptic", "/user/vive_tracker_htcx/role/right_elbow/output/haptic", "/user/vive_tracker_htcx/role/left_knee/output/haptic", "/user/vive_tracker_htcx/role/right_knee/output/haptic", "/user/vive_tracker_htcx/role/waist/output/haptic", "/user/vive_tracker_htcx/role/chest/output/haptic", "/user/vive_tracker_htcx/role/camera/output/haptic", "/user/vive_tracker_htcx/role/keyboard/output/haptic")
+
+[sub_resource type="OpenXRInteractionProfile" id="OpenXRInteractionProfile_ismt5"]
+interaction_profile_path = "/interaction_profiles/htc/vive_tracker_htcx"
+bindings = [SubResource("OpenXRIPBinding_xuq77"), SubResource("OpenXRIPBinding_0p8bb")]
+
+[sub_resource type="OpenXRIPBinding" id="OpenXRIPBinding_247ig"]
+action = SubResource("OpenXRAction_1ovmp")
+paths = PackedStringArray("/user/eyes_ext/input/gaze_ext/pose")
+
+[sub_resource type="OpenXRInteractionProfile" id="OpenXRInteractionProfile_lfvxf"]
+interaction_profile_path = "/interaction_profiles/ext/eye_gaze_interaction"
+bindings = [SubResource("OpenXRIPBinding_247ig")]
+
+[resource]
+action_sets = [SubResource("OpenXRActionSet_3x30t")]
+interaction_profiles = [SubResource("OpenXRInteractionProfile_7pshp"), SubResource("OpenXRInteractionProfile_6tltj"), SubResource("OpenXRInteractionProfile_b06xk"), SubResource("OpenXRInteractionProfile_jxaqp"), SubResource("OpenXRInteractionProfile_o6fcu"), SubResource("OpenXRInteractionProfile_rlpij"), SubResource("OpenXRInteractionProfile_roodw"), SubResource("OpenXRInteractionProfile_1ky2v"), SubResource("OpenXRInteractionProfile_i5rcb"), SubResource("OpenXRInteractionProfile_xynna"), SubResource("OpenXRInteractionProfile_dwdg0"), SubResource("OpenXRInteractionProfile_ismt5"), SubResource("OpenXRInteractionProfile_lfvxf")]
