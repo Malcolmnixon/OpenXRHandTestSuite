@@ -10,17 +10,19 @@ config_version=5
 
 [application]
 
-config/name="OpenXRHandTestSuite"
-run/main_scene="res://humanoid_avatar.tscn"
+config/name="OpenXRHandSuite"
+run/main_scene="res://scenes/demo_humanoid_avatar.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [rendering]
 
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-textures/vram_compression/import_s3tc_bptc=true
-textures/vram_compression/import_etc2_astc=true
 
 [xr]
 

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cokiitcx007xp"]
+
+[ext_resource type="PackedScene" uid="uid://b3j8c850lxlv7" path="res://scenes/demo_base.tscn" id="1_ljku2"]
+[ext_resource type="PackedScene" uid="uid://b0kgwprjxrwxi" path="res://assets/gltf/LeftHandHumanoid.gltf" id="2_kureo"]
+[ext_resource type="PackedScene" uid="uid://b6jo17mcs1vlf" path="res://assets/gltf/RightHandHumanoid.gltf" id="3_4fttu"]
+
+[node name="DemoHumanoidHands" instance=ExtResource("1_ljku2")]
+
+[node name="OpenXRHandLeft" parent="XROrigin3D" index="3"]
+hand_skeleton = NodePath("LeftHandHumanoid/LeftHandHumanoid/Skeleton3D")
+skeleton_rig = 1
+
+[node name="LeftHandHumanoid" parent="XROrigin3D/OpenXRHandLeft" index="0" instance=ExtResource("2_kureo")]
+
+[node name="OpenXRHandRight" parent="XROrigin3D" index="4"]
+hand_skeleton = NodePath("RightHandHumanoid/RightHandHumanoid/Skeleton3D")
+skeleton_rig = 1
+
+[node name="RightHandHumanoid" parent="XROrigin3D/OpenXRHandRight" index="0" instance=ExtResource("3_4fttu")]
+
+[node name="ToHumanoidHands" parent="." index="6"]
+enabled = false
+color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[editable path="XROrigin3D/OpenXRHandLeft/LeftHandHumanoid"]
+[editable path="XROrigin3D/OpenXRHandRight/RightHandHumanoid"]

@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=3 uid="uid://b3j8c850lxlv7"]
+
+[ext_resource type="Script" path="res://scenes/helpers/start_xr.gd" id="1_v8ewx"]
+[ext_resource type="PackedScene" uid="uid://clpij0u406tcu" path="res://scenes/helpers/mirrors.tscn" id="2_oxtnc"]
+[ext_resource type="PackedScene" uid="uid://bqlu8gx7m1xx" path="res://scenes/helpers/poke_button.tscn" id="3_4ccum"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ftlvd"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_gm2yr"]
+sky_material = SubResource("ProceduralSkyMaterial_ftlvd")
+
+[sub_resource type="Environment" id="Environment_aswfo"]
+background_mode = 2
+sky = SubResource("Sky_gm2yr")
+ambient_light_source = 2
+ambient_light_color = Color(0.254902, 0.254902, 0.254902, 1)
+tonemap_mode = 2
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xxib4"]
+radius = 0.05
+
+[node name="DemoBase" type="Node3D"]
+script = ExtResource("1_v8ewx")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_aswfo")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Mirrors" parent="." instance=ExtResource("2_oxtnc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+cull_mask = 1048573
+
+[node name="LeftController" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 1, -0.2)
+tracker = &"left_hand"
+pose = &"aim"
+
+[node name="Trigger" type="Area3D" parent="XROrigin3D/LeftController"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/LeftController/Trigger"]
+shape = SubResource("SphereShape3D_xxib4")
+
+[node name="RightController" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 1, -0.2)
+tracker = &"right_hand"
+pose = &"aim"
+
+[node name="Trigger" type="Area3D" parent="XROrigin3D/RightController"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XROrigin3D/RightController/Trigger"]
+shape = SubResource("SphereShape3D_xxib4")
+
+[node name="OpenXRHandLeft" type="OpenXRHand" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 1, -0.2)
+
+[node name="OpenXRHandRight" type="OpenXRHand" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 1, -0.2)
+hand = 1
+
+[node name="ToOpenXRHands" parent="." instance=ExtResource("3_4ccum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 1.4, -0.6)
+text = "OpenXR Hands"
+color = Color(0, 1, 0, 1)
+scene = "res://scenes/demo_openxr_hands.tscn"
+
+[node name="ToOpenXRAvatar" parent="." instance=ExtResource("3_4ccum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 1.2, -0.6)
+text = "OpenXR Avatar"
+color = Color(0, 1, 0, 1)
+scene = "res://scenes/demo_openxr_avatar.tscn"
+
+[node name="ToHumanoidHands" parent="." instance=ExtResource("3_4ccum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 1, -0.6)
+text = "Humanoid Hands"
+color = Color(0, 1, 0, 1)
+scene = "res://scenes/demo_humanoid_hands.tscn"
+
+[node name="ToHumanoidAvatar" parent="." instance=ExtResource("3_4ccum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0.8, -0.6)
+text = "Humanoid Avatar"
+color = Color(0, 1, 0, 1)
+scene = "res://scenes/demo_humanoid_avatar.tscn"

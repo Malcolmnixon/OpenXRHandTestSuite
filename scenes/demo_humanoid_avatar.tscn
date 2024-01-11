@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://4t8rgy3gbmdt"]
+
+[ext_resource type="PackedScene" uid="uid://b3j8c850lxlv7" path="res://scenes/demo_base.tscn" id="1_hv7b1"]
+[ext_resource type="Script" path="res://scenes/helpers/avatar.gd" id="2_l8fle"]
+[ext_resource type="PackedScene" uid="uid://cvd2r6ea2mlhm" path="res://assets/gltf/AvatarHumanoid.gltf" id="3_c7ila"]
+
+[node name="DemoHumanoidAvatar" instance=ExtResource("1_hv7b1")]
+
+[node name="IKTarget" type="Node3D" parent="XROrigin3D/XRCamera3D" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="OpenXRHandLeft" parent="XROrigin3D" index="3"]
+hand_skeleton = NodePath("../../Avatar/AvatarHumanoid/AvatarHumanoid/Skeleton3D")
+skeleton_rig = 1
+
+[node name="IKTarget" type="Node3D" parent="XROrigin3D/OpenXRHandLeft" index="0"]
+
+[node name="OpenXRHandRight" parent="XROrigin3D" index="4"]
+hand_skeleton = NodePath("../../Avatar/AvatarHumanoid/AvatarHumanoid/Skeleton3D")
+skeleton_rig = 1
+
+[node name="IKTarget" type="Node3D" parent="XROrigin3D/OpenXRHandRight" index="0"]
+
+[node name="ToHumanoidAvatar" parent="." index="7"]
+enabled = false
+color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[node name="Avatar" type="Node3D" parent="." index="8" node_paths=PackedStringArray("start_ik", "origin", "camera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0999999, 0)
+script = ExtResource("2_l8fle")
+start_ik = [NodePath("AvatarHumanoid/AvatarHumanoid/Skeleton3D/Neck"), NodePath("AvatarHumanoid/AvatarHumanoid/Skeleton3D/LeftArm"), NodePath("AvatarHumanoid/AvatarHumanoid/Skeleton3D/RightArm")]
+origin = NodePath("../XROrigin3D")
+camera = NodePath("../XROrigin3D/XRCamera3D")
+
+[node name="AvatarHumanoid" parent="Avatar" index="0" instance=ExtResource("3_c7ila")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="AvatarHumanoidEyes" parent="Avatar/AvatarHumanoid/AvatarHumanoid/Skeleton3D" index="1"]
+layers = 2
+
+[node name="AvatarHumanoidHead" parent="Avatar/AvatarHumanoid/AvatarHumanoid/Skeleton3D" index="2"]
+layers = 2
+
+[node name="Neck" type="SkeletonIK3D" parent="Avatar/AvatarHumanoid/AvatarHumanoid/Skeleton3D" index="3"]
+process_priority = 1
+root_bone = &"Neck"
+tip_bone = &"Head"
+target_node = NodePath("../../../../../XROrigin3D/XRCamera3D/IKTarget")
+
+[node name="LeftArm" type="SkeletonIK3D" parent="Avatar/AvatarHumanoid/AvatarHumanoid/Skeleton3D" index="4"]
+process_priority = 1
+root_bone = &"LeftUpperArm"
+tip_bone = &"LeftHand"
+use_magnet = true
+magnet = Vector3(4, 0, -10)
+target_node = NodePath("../../../../../XROrigin3D/OpenXRHandLeft/IKTarget")
+
+[node name="RightArm" type="SkeletonIK3D" parent="Avatar/AvatarHumanoid/AvatarHumanoid/Skeleton3D" index="5"]
+process_priority = 1
+root_bone = &"RightUpperArm"
+tip_bone = &"RightHand"
+use_magnet = true
+magnet = Vector3(-4, 0, -10)
+target_node = NodePath("../../../../../XROrigin3D/OpenXRHandRight/IKTarget")
+
+[editable path="Avatar/AvatarHumanoid"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://brhuap6aponmg"]
+
+[ext_resource type="PackedScene" uid="uid://b3j8c850lxlv7" path="res://scenes/demo_base.tscn" id="1_467af"]
+[ext_resource type="PackedScene" uid="uid://uej3647oq6uj" path="res://assets/gltf/LeftHandOpenXR.gltf" id="2_xm84v"]
+[ext_resource type="PackedScene" uid="uid://6felu3dcd1pv" path="res://assets/gltf/RightHandOpenXR.gltf" id="3_2p0gc"]
+
+[node name="DemoOpenXRHands" instance=ExtResource("1_467af")]
+
+[node name="OpenXRHandLeft" parent="XROrigin3D" index="3"]
+hand_skeleton = NodePath("LeftHandOpenXR/LeftHandOpenXR/Skeleton3D")
+
+[node name="LeftHandOpenXR" parent="XROrigin3D/OpenXRHandLeft" index="0" instance=ExtResource("2_xm84v")]
+
+[node name="OpenXRHandRight" parent="XROrigin3D" index="4"]
+hand_skeleton = NodePath("RightHandOpenXR/RightHandOpenXR/Skeleton3D")
+
+[node name="RightHandOpenXR" parent="XROrigin3D/OpenXRHandRight" index="0" instance=ExtResource("3_2p0gc")]
+
+[node name="ToOpenXRHands" parent="." index="4"]
+enabled = false
+color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[editable path="XROrigin3D/OpenXRHandLeft/LeftHandOpenXR"]
+[editable path="XROrigin3D/OpenXRHandRight/RightHandOpenXR"]
